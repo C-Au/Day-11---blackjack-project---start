@@ -164,6 +164,7 @@ def computer_goes():
     while computer_go_again == True:
         if sum(computer_cards) <= 17:
             computer_cards.append(deal_card())
+            calculate_score(user_cards, computer_cards)
         elif sum(computer_cards) > 17:
             computer_go_again = False
             compare()
